@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!--To ensure proper rendering and touch zooming for all devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <title>Hello, world!</title>
+
+  </head >
+  <body >
+    <!--__________________menu list______________________________-->
+        <div class="collapse" id="navbarToggleExternalContent" style="font-family: Cinzel Decorative;">
+          <div class="bg-dark p-4">
+
+            <div class="row justify-content-center">
+              <a href=""></a><img class="col-auto fa-solid fa-bounce" src="./images/logo3.png" alt=""  height="18" width="20" class="d-inline-block align-text-top ">
+            </div>
+            
+            <section class="row justify-content-around my-2">
+              <div class="col-3 mrg chose-div">
+                <ul>
+                  <li><a href="./index.html"><span class="text-white fs-6">HOME</span></a></li>
+                  <li><a href=""><span class="text-white">Converting area units</span></a></li>
+                  <li><a href=""><span class="text-white">Convert heat units</span></a></li>                  
+                  <li><a href=""><span class="text-white">Convert heat units</span></a></li>                  
+                </ul>
+              </div>
+              <div class="col-3 mrg chose-div">
+                <ul>
+                  <li><a href=""><span class="text-white">Convert time units</span></a></li>
+                  <li><a href=""><span class="text-white">Convert distance units</span></a></li>
+                  <li><a href=""><span class="text-white">Converting area units</span></a></li>
+                  <li><a href=""><span class="text-white">Convert heat units</span></a></li>
+                </ul>
+              </div>
+              <div class="col-3 mrg chose-div">
+                <ul>
+                  <li><a href=""><span class="text-white">Convert distance units</span></a></li>
+                  <li><a href=""><span class="text-white">Convert time units</span></a></li>
+                  <li><a href=""><span class="text-white">Convert heat units</span></a></li>
+                  <li><a href=""><span class="text-white">Convert time units</span></a></li>
+                  
+                </ul>
+              </div>
+          </section>
+          </div>
+        </div>
+
+        <!------------------to show menu------------------------------------->
+        <nav class="navbar bg-degrad" style="padding: 10px;">
+          <div class="container-fluid">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="fa-solid fa-bars fa-solid  fa-flip"></span>
+            </button>
+            <!------------------logo menu------------------------------------->
+            <img src="./images/logo3.png" alt=""  height="20" class="d-inline-block align-text-top ">
+            
+            <!--dark-white-------------------------------------->
+            <div style="margin: 5px;">
+              <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="label">
+              <i class='fas fa-sun'></i>
+              <i class="fas fa-moon"></i>
+              <div class='ball'>
+            </label>
+          </div>            
+          </div>
+        </nav>
+     
+      
+
+    
+    <!--______________________________tempiratur________________-->
+    <div class="row justify-content-around justify-content-evenly zon-list-valu " >
+      
+      <div class="col-auto" >
+        <div class="form-outline form-select-lg " style="width: 22rem;" style="width: 500px;">
+          <label class="form-label " for="typeNumber">Number input from:</label>
+          <input max="100000000000000000000" min="-100000000000000000000" step="1" value="0" type="number" id="typeNumber"class="number-input" style="font-size: 23px;"  onkeyup="if(value<-100000000000000000000) value=-100000000000000000000;if(value>100000000000000000000) value=100000000000000000000"/>
+          
+        </div>
+      </div>
+    
+
+      
+      <div class="row justify-content-around justify-content-evenly">
+      <div class="col-auto" >
+          <div class="card-body" >
+            <label class="form-label " for="typeNumber">Unit from:</label>
+            <select class="form-select form-select-lg color3" aria-label=".form-select-lg example" style="width: 337px;" id="from">
+              <option  value="F" >Fahrenheit (°F)</option>
+              <option value="C">Celsius (°C)</option>
+              <option value="K">Kelvin (K)</option>
+            </select>
+        </div>
+      </div>
+      
+
+
+      <div class="col-auto" >
+          <div class="card-body ">
+            <label class="form-label " for="typeNumber">Unit to:</label>
+            <select class="form-select form-select-lg color3" aria-label=".form-select-lg example" style="width: 337px;" id="to" >
+              <option  value="F" >Fahrenheit (°F)</option>
+              <option value="C">Celsius (°C)</option>
+              <option value="K">Kelvin (K)</option>
+            </select>
+        </div>
+      </div>
+
+    </div>
+      
+
+    </div>
+
+<!--_____________________________result___________________-->
+    <svg  xmlns="http://www.w3.org/2000/svg" style="display: none;" >
+      <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+      </symbol>
+    </svg>
+    <div class="row justify-content-center">
+
+      <div class="alert alert-success d-flex align-items-center row justify-content-center col-auto" role="alert" style="margin-top: 15px;width: 90%;">
+        <svg class="bi flex-shrink-0 me-2 mb-3" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+        <h6 id="resulte" class="text-center">An example success alert with an icon</h6>
+        <div >
+        </div>
+      </div>
+      
+    </div>
+
+    
+
+        <!--------------------botton convert---------------------->
+        <div class="row justify-content-center  ">
+          <button class="glow-on-hover col-auto"  style="width: 400px;"  onclick="convert('tempiratur')">Convert</button>
+        </div>
+
+    <!-------------------------------help____________-->
+    <div class="alert alert-success" role="alert" style="margin: 20px;">
+      <h4 class="alert-heading">This is how you can use our site!</h4>
+      <p>
+        Our website is easy to use and allows you to quickly and accurately convert units of measurement, including units of length, area, weight, volume and more. To use our website, simply select the unit of measurement you want to convert from and the unit of measurement you want to convert to. Then, enter the value you want to convert and press the convert button. The result will be displayed in a clear and easy-to-read format.
+                              
+        We have tested our converter with a variety of inputs to ensure that it provides accurate and consistent results. 
+        
+        Thank you for choosing our website, and we hope you find it useful!        
+        <hr>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--_______________________to up___________-->
+    <div class="row justify-content-center  marge-top-30px ba-white">
+      <a href="" class="col-auto"><i class="fa-solid fa-angles-up fa-solid fa-bounce"></i></a>
+    </div>
+
+        <!--_______________________________-->
+    <section  class=" row justify-content-between align-items-center  border-top border-primary bg-dark" style="padding: 10px;">
+      <div class="col-7">
+        <p class="text-muted">Copyright © 2023 HILALI YASSINE ®</p>
+      </div>
+
+      <div class="col-5">
+        <div class="row justify-content-center ">
+          <a href="" class="col-1"><i class="fa-brands fa-github "></i></a>
+          <a href="" class="col-1"><i class="fa-brands fa-youtube "></i></a>
+          <a href="" class="col-1"><i class="fa-brands fa-facebook "></i></a>
+          <a href="" class="col-1"><i class="fa-brands fa-instagram"></i></a>
+          <a href="" class="col-1"><i class="fa-solid fa-envelope"></i></a>
+          <a href="" class="col-1"><i class="fa-brands fa-telegram"></i></a>
+          <a href="" class="col-1"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div  class="row justify-content-center">
+        <a class="col-auto  fa-solid  fa-fade" href=""><img  src="./images/logo3.png"  height="15" alt="" ></a>
+      </div>
+    </section>
+
+
+
+  
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="./jav-scr.js"></script>
+    <script src="https://kit.fontawesome.com/7d1cbdb6a5.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>
